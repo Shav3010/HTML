@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link rel="stylesheet" href="intro.css">
+        <script src=".//home.js"></script>
+    
+        <style>
+            form {
+                max-width: 400px;
+                margin: 0 auto;
+                margin-top: 140px;
+            }
+    
+            label {
+                display: block;
+                margin-bottom: 8px;
+            }
+    
+            input, textarea {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 16px;
+                box-sizing: border-box;
+            }
+    
+            textarea {
+                height: 100px;
+            }
+
+            select {
+                margin-bottom: 24px; 
+            }
+    
+            button {
+                background-color: #ad8688;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                cursor: pointer;
+            }
+    
+            button:hover {
+                background-color: #dfaeae;
+            }
+        </style>
+    </head>
+
+    <body>
+    <header>
+        <div id="promo">
+            <span id="announcement-text">Spend RM180 & above to get FREE SHIPPING across Malaysia!</span>
+        </div>
+        
+        <div id="navbar">
+            <div id="left-side">
+                <a href="home.html">Home</a>
+        
+                <div id="dropdown">
+                    Shop by Colours
+                    <div id="dropdown-content">
+                        <a href=".//products/gray.html">Gray</a>
+                        <a href=".//products/brown.html">Brown</a>
+                        <a href=".//products/others.html">Others</a>
+                        <a href=".//products/all.html">All</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="logo">
+                <a href="home.html"><img src="./images/logo1.png"></a>
+            </div>
+        
+            <div id="right-side">
+                <a href="search.html">Search</a>
+                <a href="cart.html">Cart</a>
+                <a href="login.html">Account</a>
+            </div>
+        </div>
+
+        <br>
+
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="enquiry">Enquiry Type:</label>
+            <select id="enquiry" name="enquiry" required>
+                <option value="" disabled selected>Select an Enquiry type</option>
+                <option value="payment">Payment</option>
+                <option value="orders-shipping">Orders & Shipping</option>
+                <option value="returns-refunds">Returns & Refunds</option>
+                <option value="general">General</option>
+            </select>
+
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="button" onclick="validateForm()">Submit</button>
+
+            <div id="errorMessages" class="error-message"></div>
+        </form>
+        <br>
+        
+    </header>
+    </body>
+
+    <footer>
+        <div id="logo">
+            <img src="./images/logo1.png">
+
+            <p id="text">
+                <a href="contact.html">Contact Us</a> <br>
+                <a href="about.html">Who We Are</a> <br>
+                <a href="privacy.html">Privacy Policy</a> <br>
+                <a href="terms.html">Terms & Condition</a> <br>
+            </p>
+
+            <p id="socialmedia">
+                <a href="facebook.com">Facebook @Lensies Official Store</a> <br>
+                <a href="instagram.com">Instagram @Lensies Official Store</a> <br>
+            </p>
+        </div>
+    </footer>
+</html>

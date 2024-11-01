@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="home.js"></script>
+
+    <title>Login and Sign Up</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0e6e7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #container {
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            text-align: left;
+            padding: 20px;
+        }
+
+        form {
+            background-color: #af9b9c;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #555;
+        }
+
+        input {
+            width: calc(100% - 30px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color:#ad8688;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color:#af9b9c;
+        }
+
+        #switch-form {
+            margin-top: 20px;
+            color: #555;
+        }
+
+        #switch-form a {
+            color:#987173;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #switch-form a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body> 
+    <div id="container">
+
+        <form id="login-form" action="home.html" method="get" onsubmit="login()">
+            <h2>Login</h2>
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" name="login-username" required>
+
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="login-password" required>
+
+            <button type="submit">Login</button>
+
+            <div id="switch-form">
+                <p>Don't have an account? <a href="#" onclick="switchForm('signup-form')">Sign up</a></p>
+            </div>
+        </form>
+
+
+        <form id="signup-form" style="display: none;" action="home.html" method="get" onsubmit="signup()">
+            <h2>Sign Up</h2>
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" name="signup-username" required>
+
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" name="signup-email" required>
+
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="signup-password" required>
+
+            <button type="submit">Sign Up</button>
+
+            <div id="switch-form">
+                <p>Already have an account? <a href="#" onclick="switchForm('login-form')">Login</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

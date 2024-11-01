@@ -1,0 +1,197 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#promo {
+    background-color: #e7d8db; 
+    color: #837475;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+   
+}
+
+#navbar {
+    background-color: #786161; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 10px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 35px; 
+    width: 100%;
+    z-index: 1001; 
+    overflow: visible;
+}
+
+#logo {
+    text-align: center;
+    flex: 1;
+}   
+
+#navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+
+#dropdown {
+    display: inline-block;
+    position: relative;
+    z-index: 1003;
+    
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #bc7878;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1005;
+    top: 100%; 
+    left: 0;
+    
+}
+
+#dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+
+#dropdown-content a:hover {
+    background-color: #f5b7b7;
+    
+}
+
+#dropdown:hover #dropdown-content {
+    display: block;
+    
+}
+
+#content {
+    margin-top: 80px; 
+    padding: 60px;
+    z-index: 1004;
+    
+}
+
+#product-grid1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+
+#product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    margin-top: 170px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#prod_des {
+    text-align: left;
+    margin-left: 20px;
+}
+
+#prod_price {
+    text-align: right;
+    margin-right: 20px;
+}
+
+#product {
+    border: 1px solid #ddd; 
+    text-align: center;
+}
+
+#product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#add {
+    width: 150px;
+    border: none;
+    background: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#left-power {
+    text-align: left;
+    margin-left: 10px;
+}
+
+#right-power {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.dropdownadd {
+    display: none;
+    position: absolute;
+    z-index: 1005;
+    padding: 10px;
+    
+}
+
+.dropdown form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.dropdown label {
+    margin-bottom: 5px;
+}
+
+.dropdown input {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+
+footer {
+    background-color: #a48383;
+    color: white;
+    justify-content: space-between;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+    height: max-content;
+}
+
+footer #logo{
+    text-align: left;
+    
+}
+
+footer #text{
+    text-align: center;
+
+}
+
+footer #socialmedia {
+    text-align: right;
+    margin-left: 20px;
+}

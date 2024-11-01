@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <!-- Add your styles or external CSS links here -->
+</head>
+<body>
+
+<h2>Your Shopping Cart</h2>
+
+<!-- Product list with "Add to Cart" buttons -->
+<div id="productList">
+    <div class="product" id="product1">
+        <p>Product 1 - $20.00</p>
+        <button onclick="addToCart('Product 1', 20.00)">Add to Cart</button>
+    </div>
+
+    <div class="product" id="product2">
+        <p>Product 2 - $15.00</p>
+        <button onclick="addToCart('Product 2', 15.00)">Add to Cart</button>
+    </div>
+
+    <!-- Add more products as needed -->
+</div>
+
+<!-- Cart items will be dynamically added here based on user selections -->
+<div id="cartItems">
+    <!-- Cart items will be dynamically added here based on user selections -->
+    <!-- You can use JavaScript to dynamically update the cart items -->
+</div>
+
+<div id="cartTotal">
+    <p>Total: $0.00</p>
+</div>
+
+<!-- Your JavaScript code -->
+<script>
+    // Cart data
+    var cartItems = [];
+
+    // Function to add a product to the cart
+    function addToCart(productName, price) {
+        // Check if the product is already in the cart
+        var existingItem = cartItems.find(item => item.name === productName);
+
+        if (existingItem) {
+            // Increment quantity if the product is already in the cart
+            existingItem.quantity++;
+        } else {
+            // Add the product to the cart with quantity 1
+            cartItems.push({ name: productName, price: price, quantity: 1 });
+        }
+
+        // Update the cart display
+        displayCartItems();
+    }
+
+    // Function to display cart items
+    function displayCartItems() {
+        var cartItemsDiv = document.getElementById('cartItems');
+        var totalDiv = document.getElementById('cartTotal');
+        var total = 0;
+
+        // Clear existing content
+        cartItemsDiv.innerHTML = '';
+
+        // Loop through cart items and display them
+        cartItems.forEach(function (item) {
+            var itemDiv = document.createElement('div');
+            itemDiv.innerHTML = `<p>${item.name} - Quantity: ${item.quantity} - Price: $${(item.price * item.quantity).toFixed(2)}</p>`;
+            cartItemsDiv.appendChild(itemDiv);
+
+            // Update total
+            total += item.price * item.quantity;
+        });
+
+        // Display total
+        totalDiv.innerHTML = `<p>Total: $${total.toFixed(2)}</p>`;
+    }
+</script>
+
+</body>
+</html>
